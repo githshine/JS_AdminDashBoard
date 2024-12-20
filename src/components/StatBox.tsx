@@ -1,7 +1,6 @@
 import React from "react";
 import { useTheme, Typography, Box } from "@mui/material";
 import { tokens } from "../theme";
-// @ts-expect-error TS(6142): Module './ProgressCircle' was resolved to '/Users/... Remove this comment to see the full error message
 import ProgressCircle from "./ProgressCircle";
 
 const StatBox = ({
@@ -14,7 +13,6 @@ const StatBox = ({
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
-    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Box width={"100%"} m={"0 30px"}>
       // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
       <Box display={"flex"} justifyContent={"space-between"}>

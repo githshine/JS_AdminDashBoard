@@ -8,7 +8,6 @@ const ProgressCircle = ({ progress = "0.75", size = "40" }) => {
   // @ts-expect-error TS(2362): The left-hand side of an arithmetic operation must... Remove this comment to see the full error message
   const angle = progress * 360;
   return (
-    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Box
       sx={{
         background: `radial-gradient(${colors.primary[400]} 55%, transparent 56%),

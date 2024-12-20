@@ -14,7 +14,6 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-// @ts-expect-error TS(6142): Module '../../components/Header' was resolved to '... Remove this comment to see the full error message
 import Header from "../../components/Header";
 import { tokens } from "../../theme";
 
@@ -51,7 +50,6 @@ const Calendar = () => {
   };
 
   return (
-    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Box m={"20px"}>
       // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
       <Header title={"Calendar"} subtitle={"Full Calendar Interactive Page."} />
@@ -60,7 +58,7 @@ const Calendar = () => {
       <Box display={"flex"} justifyContent={"space-between"}>
         {/* CALENDAR SIDEBAR */}
         // @ts-expect-error TS(2769): No overload matches this call.
-        <Box
+        <Box 
           flex={"1 1 20%"}
           backgroundColor={colors.primary[400]}
           p="15px"
@@ -71,7 +69,6 @@ const Calendar = () => {
           // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
           <List>
             {currentEvents.map((event) => (
-              // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
               <ListItem
                 // @ts-expect-error TS(2339): Property 'id' does not exist on type 'never'.
                 key={event.id}
@@ -86,7 +83,6 @@ const Calendar = () => {
                   // @ts-expect-error TS(2339): Property 'title' does not exist on type 'never'.
                   primary={event.title}
                   secondary={
-                    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
                     <Typography>
                       // @ts-expect-error TS(2339): Property 'start' does not exist on type 'never'.
                       {formatDate(event.start, {

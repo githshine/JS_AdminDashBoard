@@ -1,29 +1,16 @@
 import { Routes, Route } from "react-router-dom";
-// @ts-expect-error TS(6142): Module './scenes/global/Topbar' was resolved to '/... Remove this comment to see the full error message
 import Topbar from "./scenes/global/Topbar";
-// @ts-expect-error TS(6142): Module './scenes/global/Sidebar' was resolved to '... Remove this comment to see the full error message
 import Sidebars from "./scenes/global/Sidebar";
-// @ts-expect-error TS(6142): Module './scenes/dashboard/index' was resolved to ... Remove this comment to see the full error message
 import Dashboard from "./scenes/dashboard/index";
-// @ts-expect-error TS(6142): Module './scenes/team/Team' was resolved to '/User... Remove this comment to see the full error message
 import Team from "./scenes/team/Team";
-// @ts-expect-error TS(6142): Module './scenes/contacts/Contacts' was resolved t... Remove this comment to see the full error message
 import Contacts from "./scenes/contacts/Contacts";
-// @ts-expect-error TS(6142): Module './scenes/invoices/Invoices' was resolved t... Remove this comment to see the full error message
 import Invoices from "./scenes/invoices/Invoices";
-// @ts-expect-error TS(6142): Module './scenes/form/Form' was resolved to '/User... Remove this comment to see the full error message
 import Form from "./scenes/form/Form";
-// @ts-expect-error TS(6142): Module './scenes/calendar/Calendar' was resolved t... Remove this comment to see the full error message
 import Calendar from "./scenes/calendar/Calendar";
-// @ts-expect-error TS(6142): Module './scenes/faq/FAQ' was resolved to '/Users/... Remove this comment to see the full error message
 import FAQ from "./scenes/faq/FAQ";
-// @ts-expect-error TS(6142): Module './scenes/bar/Bar' was resolved to '/Users/... Remove this comment to see the full error message
 import Bar from "./scenes/bar/Bar";
-// @ts-expect-error TS(6142): Module './scenes/pie/Pie.jsx' was resolved to '/Us... Remove this comment to see the full error message
-import Pie from "./scenes/pie/Pie.js";
-// @ts-expect-error TS(6142): Module './scenes/line/Line' was resolved to '/User... Remove this comment to see the full error message
+import Pie from "./scenes/pie/Pie";
 import Line from "./scenes/line/Line";
-// @ts-expect-error TS(6142): Module './scenes/geography/Geography' was resolved... Remove this comment to see the full error message
 import Geography from "./scenes/geography/Geography";
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
@@ -35,7 +22,8 @@ function App() {
     // @ts-expect-error TS(2503): Cannot find namespace 'ColorModeContext'.
     <ColorModeContext.Provider value={colorMode}>
       // @ts-expect-error TS(2749): 'ThemeProvider' refers to a value, but is being us... Remove this comment to see the full error message
-      <ThemeProvider theme={theme}>
+      {/* <ThemeProvider theme={theme}> */}
+      <ThemeProvider theme>
         // @ts-expect-error TS(2749): 'CssBaseline' refers to a value, but is being used... Remove this comment to see the full error message
         <CssBaseline />
         // @ts-expect-error TS(2304): Cannot find name 'div'.
