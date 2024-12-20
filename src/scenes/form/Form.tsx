@@ -3,6 +3,7 @@ import { Box, Button, TextField } from "@mui/material";
 import { Formik } from "formik";
 import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
+// @ts-expect-error TS(6142): Module '../../components/Header' was resolved to '... Remove this comment to see the full error message
 import Header from "../../components/Header";
 
 const initialValues = {
@@ -32,14 +33,17 @@ const checkoutSchema = yup.object().shape({
 const Form = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
-  const handleFormSubmit = (values) => {
+  const handleFormSubmit = (values: any) => {
     console.log(values);
   };
 
   return (
+    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Box m={"20px"}>
+      // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
       <Header title={"CREATE USER"} subtitle={"Create a new user profile."} />
 
+      // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
       <Formik
         onSubmit={handleFormSubmit}
         initialValues={initialValues}
@@ -53,7 +57,9 @@ const Form = () => {
           handleChange,
           handleSubmit,
         }) => (
+          // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
           <form onSubmit={handleSubmit}>
+            // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
             <Box
               display="grid"
               gap="30px"
@@ -62,6 +68,7 @@ const Form = () => {
                 "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
               }}
             >
+              // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
               <TextField
                 fullWidth
                 variant="filled"
@@ -76,6 +83,7 @@ const Form = () => {
                 sx={{ gridColumn: "span 2" }}
               />
 
+              // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
               <TextField
                 fullWidth
                 variant="filled"
@@ -90,6 +98,7 @@ const Form = () => {
                 sx={{ gridColumn: "span 2" }}
               />
 
+              // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
               <TextField
                 fullWidth
                 variant="filled"
@@ -104,6 +113,7 @@ const Form = () => {
                 sx={{ gridColumn: "span 4" }}
               />
 
+              // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
               <TextField
                 fullWidth
                 variant="filled"
@@ -118,6 +128,7 @@ const Form = () => {
                 sx={{ gridColumn: "span 4" }}
               />
 
+              // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
               <TextField
                 fullWidth
                 variant="filled"
@@ -132,6 +143,7 @@ const Form = () => {
                 sx={{ gridColumn: "span 4" }}
               />
 
+              // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
               <TextField
                 fullWidth
                 variant="filled"
@@ -146,7 +158,9 @@ const Form = () => {
                 sx={{ gridColumn: "span 4" }}
               />
             </Box>
+            // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
             <Box display="flex" justifyContent="end" mt="20px">
+              // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
               <Button type="submit" color="secondary" variant="contained">
                 Create New User
               </Button>

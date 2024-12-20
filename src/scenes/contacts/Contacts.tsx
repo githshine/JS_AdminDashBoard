@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataContacts } from "../../data/mockData";
+// @ts-expect-error TS(6142): Module '../../components/Header' was resolved to '... Remove this comment to see the full error message
 import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
 
@@ -53,11 +54,14 @@ const Contacts = () => {
   ];
 
   return (
+    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Box m="20px">
+      // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
       <Header
         title="CONTACTS"
         subtitle="List of Contacts for Future Reference."
       />
+      // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
       <Box
         m="40px 0 0 0"
         height="70vh"
@@ -90,8 +94,10 @@ const Contacts = () => {
           },
         }}
       >
+        // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
         <DataGrid
           rows={mockDataContacts}
+          // @ts-expect-error TS(2322): Type '({ field: string; headerName: string; flex: ... Remove this comment to see the full error message
           columns={columns}
           components={{ Toolbar: GridToolbar }}
         />
