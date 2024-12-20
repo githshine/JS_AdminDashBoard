@@ -20,7 +20,7 @@ import FAQ from "./scenes/faq/FAQ";
 // @ts-expect-error TS(6142): Module './scenes/bar/Bar' was resolved to '/Users/... Remove this comment to see the full error message
 import Bar from "./scenes/bar/Bar";
 // @ts-expect-error TS(6142): Module './scenes/pie/Pie.jsx' was resolved to '/Us... Remove this comment to see the full error message
-import Pie from "./scenes/pie/Pie.jsx";
+import Pie from "./scenes/pie/Pie.js";
 // @ts-expect-error TS(6142): Module './scenes/line/Line' was resolved to '/User... Remove this comment to see the full error message
 import Line from "./scenes/line/Line";
 // @ts-expect-error TS(6142): Module './scenes/geography/Geography' was resolved... Remove this comment to see the full error message
